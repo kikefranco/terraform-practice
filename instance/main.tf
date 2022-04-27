@@ -5,10 +5,10 @@ resource "aws_instance" "platzi-instance" {
   ami             = var.ami_id
   instance_type   = var.instance_type
   tags            = var.tags
-  security_groups = ["${aws_security_group.ssh_conection.name}"]
+  security_groups = ["${aws_security_group.sg_conection.name}"]
 }
-resource "aws_security_group" "ssh_conection" {
-  name = var.ssh_name
+resource "aws_security_group" "sg_conection" {
+  name = var.sg_name
   dynamic "ingress" {
     for_each = var.ingress_rules
     content {

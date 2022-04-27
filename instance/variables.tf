@@ -16,7 +16,7 @@ variable "tags" {
   type        = map(any)
 }
 
-variable "ssh_name" {
+variable "sg_name" {
 }
 
 variable "ingress_rules" {
