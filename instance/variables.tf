@@ -21,3 +21,6 @@ variable "ssh_name" {
 
 variable "ingress_rules" {
 }
+
+variable "egress_rules" {
+}
